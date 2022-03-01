@@ -1,0 +1,21 @@
+.header {
+	padding: 3em 1.6em 1.4em 1.6em;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.header__title {
+	/* margin: 0.7em 0 0.5em 0; */
+
+	font-size: 1.8em;
+	letter-spacing: 0.3em;
+
+	color: var(--bg-component);
+}
+
+.icon--header {
+	color: var(--bg-component);
+	transform: rotate(-45deg);
+}
