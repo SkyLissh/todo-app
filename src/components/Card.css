@@ -1,0 +1,10 @@
+.card {
+	height: 3em;
+
+	margin: 0.5em 1em;
+	padding: 0 1.4em;
+
+	background-color: var(--bg-component);
+
+	border-radius: 6px;
+}
