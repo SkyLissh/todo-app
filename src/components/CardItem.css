@@ -1,9 +1,20 @@
 .card__item {
 	min-height: 100%;
 
+	padding: 0.8em 1.3em;
+
+	/* border: 1px solid; */
+	border-bottom: 1px solid var(--fg-disabled);
+
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+}
+.card__item:last-child {
+	padding: 1em 1.3em;
+	border-bottom: none;
+
+	color: var(--fg-secondary);
 }
 
 .circle {

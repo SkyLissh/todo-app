@@ -1,15 +1,17 @@
 import "src/components/CardItem.css";
 
 interface Props {
+	circle?: boolean;
+	close?: boolean;
 	children: React.ReactNode;
 }
 
 export default function CardItem(props: Props) {
 	return (
 		<div className="card__item">
-			<div className="circle"></div>
+			{props.circle && <div className="circle"></div>}
 			{props.children}
-			<span className="material-icons icon">close</span>
+			{props.close && <span className="material-icons icon">close</span>}
 		</div>
 	);
 }

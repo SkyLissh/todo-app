@@ -1,4 +1,13 @@
 .bg__image {
 	z-index: -1;
 	position: absolute;
+
+	width: 100%;
+}
+
+.footer {
+	margin-top: 4em;
+
+	text-align: center;
+	color: var(--fg-secondary);
 }

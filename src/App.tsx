@@ -1,7 +1,9 @@
-import "src/App.css";
 import Header from "src/components/Header";
 import Input from "src/components/Input";
 import Tasks from "src/components/Tasks";
+import Filter from "src/components/Filter";
+
+import "src/App.css";
 
 function App() {
 	return (
@@ -14,6 +16,11 @@ function App() {
 			<Header />
 			<Input />
 			<Tasks />
+			<Filter />
+
+			<footer className="footer">
+				<p className="footer_text">Drag and drop to render list</p>
+			</footer>
 		</>
 	);
 }
