@@ -4,12 +4,19 @@ interface Props {
 	circle?: boolean;
 	close?: boolean;
 	children: React.ReactNode;
+	// TODO: add done property
 }
 
 export function CardItem(props: Props) {
 	return (
 		<div className="card__item">
-			{props.circle && <div className="circle"></div>}
+			{props.circle && (
+				// TODO: Circle and text class change with done property
+
+				<div className="circle">
+					<span className="material-icons icon icon--done icon--hidden">done</span>
+				</div>
+			)}
 			{props.children}
 			{props.close && <span className="material-icons icon">close</span>}
 		</div>

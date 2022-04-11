@@ -1,4 +1,11 @@
 :root {
+	--accent: hsl(220, 98%, 61%);
+	--bg-gradient: linear-gradient(
+		to bottom right,
+		hsl(192, 100%, 67%),
+		hsl(280, 87%, 65%)
+	);
+
 	--bg-component: hsl(0, 0%, 98%);
 	--bg: hsl(236, 33%, 92%);
 	--fg-disabled: hsl(233, 11%, 84%);
@@ -7,9 +14,12 @@
 
 	--bg-component-dark: hsl(235, 24%, 19%);
 	--bg-dark: hsl(234, 21%, 11%);
+	--fg-disabled-dark: hsl(233, 14%, 35%);
+	--fg-secondary-dark: hsl(234, 11%, 52%);
 	--fg-dark: hsl(234, 39%, 85%);
 
 	--shadow-color: 233, 11%, 84%;
+	--shadow-dark: 235, 21%, 11%;
 
 	--shadow-medium: 1px 2px 2px hsl(var(--shadow-color), 0.333),
 		2px 4px 4px hsl(var(--shadow-color), 0.333),
@@ -19,6 +29,14 @@
 		2px 4px 4px hsl(var(--shadow-color), 0.2), 4px 8px 8px hsl(var(--shadow-color), 0.2),
 		8px 16px 16px hsl(var(--shadow-color), 0.2),
 		16px 32px 32px hsl(var(--shadow-color), 0.2);
+
+	--shadow-medium-dark: 1px 2px 2px hsl(var(--shadow-dark), 0.333),
+		2px 4px 4px hsl(var(--shadow-dark), 0.333), 3px 6px 6px hsl(var(--shadow-dark), 0.333);
+
+	--shadow-large-dark: 1px 2px 2px hsl(var(--shadow-dark), 0.2),
+		2px 4px 4px hsl(var(--shadow-dark), 0.2), 4px 8px 8px hsl(var(--shadow-dark), 0.2),
+		8px 16px 16px hsl(var(--shadow-dark), 0.2),
+		16px 32px 32px hsl(var(--shadow-dark), 0.2);
 
 	--font-family: "Josefin Sans", sans-serif;
 }
@@ -45,6 +63,14 @@ h1 {
 	color: var(--fg-secondary);
 
 	display: block;
+}
+
+.icon--hidden {
+	display: none;
+}
+
+.theme--dark .icon {
+	color: var(--fg-secondary-dark);
 }
 
 @media (min-width: 768px) {

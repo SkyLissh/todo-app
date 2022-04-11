@@ -15,6 +15,13 @@
 	color: var(--fg-secondary);
 }
 
+.theme--dark .card__input {
+	color: var(--fg-dark);
+}
+.theme--dark .card__input::placeholder {
+	color: var(--fg-secondary-dark);
+}
+
 @media (min-width: 768px) {
 	.card__input {
 		font-size: 1.3em;

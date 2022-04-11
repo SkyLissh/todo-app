@@ -10,10 +10,19 @@
 	background-size: cover;
 	background-repeat: no-repeat;
 }
+
+.theme--dark .bg__image {
+	background-image: url("/assets/images/bg-mobile-dark.jpg");
+}
+
 @media (min-width: 768px) {
 	.bg__image {
 		height: 35%;
 		background-image: url("/assets/images/bg-desktop-light.jpg");
+	}
+
+	.theme--dark .bg__image {
+		background-image: url("/assets/images/bg-desktop-dark.jpg");
 	}
 }
 
@@ -22,4 +31,8 @@
 
 	text-align: center;
 	color: var(--fg-secondary);
+}
+
+.theme--dark .footer {
+	color: var(--fg-secondary-dark);
 }

@@ -6,9 +6,14 @@
 
 	background-color: var(--bg-component);
 	box-shadow: var(--shadow-large);
-	border-radius: 6px;
+	border-radius: 8px;
 
 	/* display: grid; */
+}
+
+.theme--dark .card {
+	background-color: var(--bg-component-dark);
+	box-shadow: var(--shadow-large-dark);
 }
 
 @media (min-width: 768px) {

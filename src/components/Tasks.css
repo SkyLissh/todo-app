@@ -14,6 +14,10 @@
 	text-align: right;
 }
 
+.theme--dark .card__text {
+	color: var(--fg-dark);
+}
+
 .options {
 	width: 100%;
 
@@ -29,6 +33,11 @@
 
 .task__option {
 	flex: 0 0 calc(50% - 1em);
+	color: var(--fg-secondary);
+}
+
+.theme--dark .task__option {
+	color: var(--fg-secondary-dark);
 }
 
 .option--select {
@@ -38,6 +47,10 @@
 	cursor: pointer;
 
 	color: var(--fg);
+}
+
+.theme--dark .option--select:hover {
+	color: var(--fg-dark);
 }
 
 @media (min-width: 768px) {

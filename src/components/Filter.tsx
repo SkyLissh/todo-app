@@ -9,9 +9,9 @@ type Props = {
 export function Filter({ hidden }: Props) {
 	return (
 		<div className={`filter ${hidden ? "hide--filter" : ""}`}>
-			<p className="card__text">All</p>
-			<p className="card__text">Active</p>
-			<p className="card__text">Completed</p>
+			<p className="filter__text active">All</p>
+			<p className="filter__text">Active</p>
+			<p className="filter__text">Completed</p>
 		</div>
 	);
 }
