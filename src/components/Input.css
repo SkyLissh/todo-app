@@ -14,3 +14,9 @@
 .card__input::placeholder {
 	color: var(--fg-secondary);
 }
+
+@media (min-width: 768px) {
+	.card__input {
+		font-size: 1.3em;
+	}
+}

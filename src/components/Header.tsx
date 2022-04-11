@@ -1,10 +1,10 @@
 import "src/components/Header.css";
 
-export default function Header() {
+export function Header() {
 	return (
 		<header className="header">
 			<h1 className="header__title">TODO</h1>
-			<span className="material-icons icon icon--header">nightlight_round</span>
+			<span className="material-icons icon icon--header">brightness_3</span>
 		</header>
 	);
 }

@@ -3,6 +3,18 @@
 	position: absolute;
 
 	width: 100%;
+	height: 25%;
+
+	background-image: url("/assets/images/bg-mobile-light.jpg");
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+@media (min-width: 768px) {
+	.bg__image {
+		height: 35%;
+		background-image: url("/assets/images/bg-desktop-light.jpg");
+	}
 }
 
 .footer {

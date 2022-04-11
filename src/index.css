@@ -5,6 +5,10 @@
 	--fg-secondary: hsl(236, 9%, 61%);
 	--fg: hsl(235, 19%, 35%);
 
+	--bg-component-dark: hsl(235, 24%, 19%);
+	--bg-dark: hsl(234, 21%, 11%);
+	--fg-dark: hsl(234, 39%, 85%);
+
 	--shadow-color: 233, 11%, 84%;
 
 	--shadow-medium: 1px 2px 2px hsl(var(--shadow-color), 0.333),
@@ -26,6 +30,10 @@ body {
 	font-family: var(--font-family);
 }
 
+body.theme--dark {
+	background-color: var(--bg-dark);
+}
+
 h1 {
 	margin: 0;
 }
@@ -35,6 +43,20 @@ h1 {
 	/* height: 1.6em; */
 	font-size: 26px;
 	color: var(--fg-secondary);
+
+	display: block;
+}
+
+@media (min-width: 768px) {
+	.icon {
+		/* display: none; */
+		opacity: 0;
+		visibility: hidden;
+
+		cursor: pointer;
+
+		transition: opacity 0.3s ease-in-out;
+	}
 }
 
 code {

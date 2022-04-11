@@ -1,22 +1,22 @@
-import Header from "src/components/Header";
-import Input from "src/components/Input";
-import Tasks from "src/components/Tasks";
-import Filter from "src/components/Filter";
+import { Container, FilterCard, Header, Input, Tasks } from "src/components";
 
 import "src/App.css";
 
 function App() {
 	return (
 		<>
-			<img
+			{/* <img
 				className="bg__image"
 				src="/assets/images/bg-mobile-light.jpg"
 				alt="background image"
-			/>
-			<Header />
-			<Input />
-			<Tasks />
-			<Filter />
+			/> */}
+			<div className="bg__image"></div>
+			<Container>
+				<Header />
+				<Input />
+				<Tasks />
+				<FilterCard />
+			</Container>
 
 			<footer className="footer">
 				<p className="footer_text">Drag and drop to render list</p>

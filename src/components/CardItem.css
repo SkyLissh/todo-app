@@ -26,3 +26,25 @@
 
 	/* background-color: var(--fg-disabled); */
 }
+.circle:hover {
+	cursor: pointer;
+}
+
+@media (min-width: 768px) {
+	.card__item {
+		padding: 1.5em 1.3em;
+	}
+	.card__item:hover .icon {
+		opacity: 1;
+		visibility: visible;
+	}
+
+	.card__item:last-child {
+		padding: 1.5em 1.3em;
+	}
+
+	.circle {
+		width: 1.5em;
+		height: 1.5em;
+	}
+}

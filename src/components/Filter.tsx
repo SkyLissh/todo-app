@@ -1,13 +1,26 @@
-import Card from "src/components/Card";
-import CardItem from "src/components/CardItem";
+import { Card, CardItem } from "src/components";
 
-export default function Filter() {
+import "src/components/Filter.css";
+
+type Props = {
+	hidden?: boolean;
+};
+
+export function Filter({ hidden }: Props) {
 	return (
-		<Card>
+		<div className={`filter ${hidden ? "hide--filter" : ""}`}>
+			<p className="card__text">All</p>
+			<p className="card__text">Active</p>
+			<p className="card__text">Completed</p>
+		</div>
+	);
+}
+
+export function FilterCard() {
+	return (
+		<Card mediaHidden>
 			<CardItem>
-				<p className="card__text">All</p>
-				<p className="card__text">Active</p>
-				<p className="card__text">Completed</p>
+				<Filter />
 			</CardItem>
 		</Card>
 	);

@@ -1,7 +1,7 @@
 .card {
 	min-height: 3em;
 
-	margin: 0.5em 1em 1.2em 1em;
+	margin: 0.5em 0 1.2em;
 	/* padding: 0 1.4em; */
 
 	background-color: var(--bg-component);
@@ -9,4 +9,14 @@
 	border-radius: 6px;
 
 	/* display: grid; */
+}
+
+@media (min-width: 768px) {
+	.hide {
+		display: none;
+	}
+
+	.card:first-child {
+		margin-bottom: 2em;
+	}
 }

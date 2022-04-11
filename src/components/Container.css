@@ -1,0 +1,19 @@
+.container {
+	padding: 0 1em;
+}
+
+@media (min-width: 768px) {
+	.container {
+		padding: 2em 20%;
+	}
+}
+
+@media (min-width: 1280px) {
+	.container {
+		padding: 2em 31%;
+	}
+
+	.container .card:nth-child(3) {
+		margin-top: 2em;
+	}
+}

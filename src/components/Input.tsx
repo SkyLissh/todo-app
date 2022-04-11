@@ -1,8 +1,7 @@
 import "src/components/Input.css";
-import Card from "src/components/Card";
-import CardItem from "src/components/CardItem";
+import { Card, CardItem } from "src/components";
 
-export default function Input() {
+export function Input() {
 	return (
 		<Card>
 			<CardItem circle>

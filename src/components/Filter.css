@@ -1,0 +1,37 @@
+.filter {
+	flex: 1;
+
+	display: flex;
+	justify-content: space-between;
+}
+
+.filter .card__text {
+	width: auto;
+	margin: 0;
+
+	font-weight: 600;
+
+	flex: 0 0 calc(33.3333% - 0.5em);
+
+	transition: color 0.2s ease-in-out;
+}
+.filter .card__text:hover {
+	cursor: pointer;
+
+	color: var(--fg);
+}
+
+.filter.hide--filter {
+	display: none;
+}
+
+@media (min-width: 768px) {
+	.filter.hide--filter {
+		/* width: auto;
+		height: auto;
+
+		opacity: 1;
+		visibility: visible; */
+		display: flex;
+	}
+}

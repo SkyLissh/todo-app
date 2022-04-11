@@ -6,7 +6,7 @@ interface Props {
 	children: React.ReactNode;
 }
 
-export default function CardItem(props: Props) {
+export function CardItem(props: Props) {
 	return (
 		<div className="card__item">
 			{props.circle && <div className="circle"></div>}

@@ -1,5 +1,5 @@
 .header {
-	padding: 3em 1.2em 1.5em 1.2em;
+	padding: 3em 0 1.5em 0;
 
 	display: flex;
 	justify-content: space-between;
@@ -16,6 +16,19 @@
 }
 
 .icon--header {
+	opacity: 1;
+	visibility: visible;
+
 	color: var(--bg-component);
-	transform: rotate(-45deg);
+	transform: rotate(135deg);
+}
+
+@media (min-width: 768px) {
+	.header__title {
+		font-size: 3em;
+	}
+
+	.icon--header {
+		font-size: 2.5em;
+	}
 }
