@@ -1,0 +1,51 @@
+.button {
+	padding: 0.5em 2em;
+
+	font-size: 1em;
+	font-family: var(--font-family);
+	font-weight: 600;
+
+	color: var(--fg);
+	background: var(--bg-gradient);
+
+	border: none;
+	border-radius: 8px;
+
+	transition: color 0.3s ease-in-out;
+
+	display: inline-block;
+}
+
+.button:hover {
+	cursor: pointer;
+	color: var(--fg-disabled);
+}
+
+.theme--dark .button:hover {
+	color: var(--fg-dark);
+}
+
+.button--icon {
+	padding: 0;
+
+	color: var(--fg-secondary);
+
+	background: none;
+}
+
+.button--alt {
+	color: white;
+}
+/* .button--alt.button--icon {
+	color: var(--bg-color);
+} */
+
+.button--alt .material-icons {
+	font-size: 1.7em;
+}
+
+@media (min-width: 768px) {
+	.button--alt .material-icons {
+		font-size: 2.5em;
+	}
+}

@@ -46,6 +46,8 @@ body {
 
 	background-color: var(--bg);
 	font-family: var(--font-family);
+
+	transition: background-color 0.3s ease-in-out;
 }
 
 body.theme--dark {
@@ -59,8 +61,8 @@ h1 {
 .icon {
 	/* width: 1.6em; */
 	/* height: 1.6em; */
-	font-size: 26px;
-	color: var(--fg-secondary);
+	/* font-size: 26px; */
+	/* color: var(--fg-secondary); */
 
 	display: block;
 }
@@ -69,13 +71,8 @@ h1 {
 	display: none;
 }
 
-.theme--dark .icon {
-	color: var(--fg-secondary-dark);
-}
-
 @media (min-width: 768px) {
 	.icon {
-		/* display: none; */
 		opacity: 0;
 		visibility: hidden;
 

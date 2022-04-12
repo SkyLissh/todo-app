@@ -2,13 +2,12 @@
 	min-height: 3em;
 
 	margin: 0.5em 0 1.2em;
-	/* padding: 0 1.4em; */
 
 	background-color: var(--bg-component);
 	box-shadow: var(--shadow-large);
 	border-radius: 8px;
 
-	/* display: grid; */
+	transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .theme--dark .card {

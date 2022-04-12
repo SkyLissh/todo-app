@@ -13,6 +13,7 @@
 }
 .card__input::placeholder {
 	color: var(--fg-secondary);
+	transition: color 0.3s ease-in-out;
 }
 
 .theme--dark .card__input {

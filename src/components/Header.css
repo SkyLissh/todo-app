@@ -19,20 +19,11 @@
 	opacity: 1;
 	visibility: visible;
 
-	color: var(--bg-component);
 	transform: rotate(135deg);
-}
-
-.theme--dark .icon--header {
-	color: white;
 }
 
 @media (min-width: 768px) {
 	.header__title {
 		font-size: 3em;
-	}
-
-	.icon--header {
-		font-size: 2.5em;
 	}
 }

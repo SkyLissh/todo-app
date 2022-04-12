@@ -1,3 +1,5 @@
+import { Button } from "src/components";
+
 import "src/components/CardItem.css";
 
 interface Props {
@@ -18,7 +20,11 @@ export function CardItem(props: Props) {
 				</div>
 			)}
 			{props.children}
-			{props.close && <span className="material-icons icon">close</span>}
+			{props.close && (
+				<Button iconStyle>
+					<span className="material-icons icon">close</span>
+				</Button>
+			)}
 		</div>
 	);
 }

@@ -1,15 +1,19 @@
 import { Container, FilterCard, Header, Input, Tasks } from "src/components";
 
 import "src/App.css";
+import { useEffect } from "react";
 
 function App() {
+	useEffect(() => {
+		const body: string | null = localStorage.getItem("dark-theme");
+
+		if (body === "true") {
+			document.body.classList.add("theme--dark");
+		}
+	});
+
 	return (
 		<>
-			{/* <img
-				className="bg__image"
-				src="/assets/images/bg-mobile-light.jpg"
-				alt="background image"
-			/> */}
 			<div className="bg__image"></div>
 			<Container>
 				<Header />

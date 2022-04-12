@@ -6,6 +6,8 @@
 	/* border: 1px solid; */
 	border-bottom: 1px solid var(--fg-disabled);
 
+	transition: border-bottom 0.3s ease-in-out;
+
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -32,6 +34,8 @@
 
 	border-radius: 50%;
 	border: 1px solid var(--fg-disabled);
+
+	transition: border-color 0.3s ease-in-out;
 
 	display: flex;
 	justify-content: center;

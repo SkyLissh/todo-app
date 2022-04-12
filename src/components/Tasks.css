@@ -6,6 +6,8 @@
 
 	color: var(--fg);
 
+	transition: color 0.3s ease-in-out;
+
 	flex: 1 1 auto;
 }
 .card__text:last-child {
