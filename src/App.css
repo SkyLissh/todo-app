@@ -27,7 +27,11 @@
 }
 
 .footer {
-	margin-top: 4em;
+	position: fixed;
+
+	width: 100%;
+
+	margin: 2em 0;
 
 	text-align: center;
 	color: var(--fg-secondary);

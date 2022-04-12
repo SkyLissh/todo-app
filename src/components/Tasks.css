@@ -18,6 +18,11 @@
 	color: var(--fg-dark);
 }
 
+.card__text.active {
+	color: var(--fg-secondary);
+	text-decoration: line-through;
+}
+
 .options {
 	width: 100%;
 

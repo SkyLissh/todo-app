@@ -63,6 +63,10 @@
 	color: white;
 }
 
+.item__text {
+	display: block;
+}
+
 @media (min-width: 768px) {
 	.card__item {
 		padding: 1.5em 1.3em;
