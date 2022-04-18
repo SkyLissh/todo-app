@@ -1,5 +1,6 @@
-import "src/components/Input.css";
 import { Card, CardItem } from "src/components";
+
+import "src/components/Input.css";
 
 export function Input() {
 	return (

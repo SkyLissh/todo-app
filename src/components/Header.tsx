@@ -13,12 +13,6 @@ export function Header() {
 			localStorage.setItem("dark-theme", "true");
 			document.body.classList.add("theme--dark");
 		}
-
-		// if (body?.classList.contains("theme--dark")) {
-		// 	body?.classList.remove("theme--dark");
-		// } else {
-		// 	body?.classList.add("theme--dark");
-		// }
 	}
 
 	return (
