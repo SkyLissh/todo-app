@@ -1,25 +1,27 @@
-import { Container, FilterCard, Header, Input, Tasks } from "src/components";
+import { useEffect, useState } from "react";
 
 import "src/App.css";
-import { useEffect } from "react";
+
+import { Container, FilterCard, Header, Input, Tasks } from "src/components";
+import { Task } from "src/models/task";
 
 function App() {
-	useEffect(() => {
-		const body: string | null = localStorage.getItem("dark-theme");
+	const savedTasks = localStorage.getItem("tasks");
+	const parsedTasks: Task[] = savedTasks ? JSON.parse(savedTasks) : [];
 
-		if (body === "true") {
-			document.body.classList.add("theme--dark");
-		}
-	});
+	const currentFilter = localStorage.getItem("filter") || "all";
+
+	const [tasks, setTasks] = useState<Task[]>(parsedTasks);
+	const [filter, setFilter] = useState<string>(currentFilter);
 
 	return (
 		<>
 			<div className="bg__image"></div>
 			<Container>
 				<Header />
-				<Input />
-				<Tasks />
-				<FilterCard />
+				<Input setTasks={setTasks} />
+				<Tasks taskState={[tasks, setTasks]} filterState={[filter, setFilter]} />
+				<FilterCard filterState={[filter, setFilter]} />
 			</Container>
 
 			<footer className="footer">
