@@ -1,6 +1,10 @@
+.card__form {
+	flex: 1 1 auto;
+}
+
 .card__input {
 	margin-left: 1em;
-	width: 0;
+	width: 100%;
 
 	font-family: var(--font-family);
 	font-size: 1em;
@@ -8,8 +12,6 @@
 	outline: none;
 	border: none;
 	background-color: transparent;
-
-	flex: 1 1 auto;
 }
 .card__input::placeholder {
 	color: var(--fg-secondary);
