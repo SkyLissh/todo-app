@@ -1,27 +1,33 @@
-import { Card, CardItem } from "src/components";
+import { Dispatch, SetStateAction } from "react";
 
 import "src/components/Filter.css";
 
 type Props = {
 	hidden?: boolean;
+
+	filterState: [string, Dispatch<SetStateAction<string>>];
 };
 
-export function Filter({ hidden }: Props) {
+export function Filter({ hidden, filterState }: Props) {
+	const [filter, setFilter] = filterState;
+	const options: string[] = ["all", "active", "completed"];
+
+	function changeFilter(filter: string) {
+		localStorage.setItem("filter", filter);
+		setFilter(filter);
+	}
+
 	return (
 		<div className={`filter ${hidden ? "hide--filter" : ""}`}>
-			<p className="filter__text active">All</p>
-			<p className="filter__text">Active</p>
-			<p className="filter__text">Completed</p>
+			{options.map((option) => (
+				<p
+					className={`filter__text ${filter == option ? "active" : ""}`}
+					key={option}
+					onClick={() => changeFilter(option)}
+				>
+					{option}
+				</p>
+			))}
 		</div>
-	);
-}
-
-export function FilterCard() {
-	return (
-		<Card mediaHidden>
-			<CardItem>
-				<Filter />
-			</CardItem>
-		</Card>
 	);
 }

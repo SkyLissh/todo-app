@@ -13,6 +13,7 @@
 	font-weight: 600;
 
 	flex: 0 0 calc(33.3333% - 0.5em);
+	text-transform: capitalize;
 
 	transition: color 0.2s ease-in-out;
 }
