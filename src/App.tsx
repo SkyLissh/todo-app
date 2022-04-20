@@ -9,10 +9,7 @@ function App() {
 	const savedTasks = localStorage.getItem("tasks");
 	const parsedTasks: Task[] = savedTasks ? JSON.parse(savedTasks) : [];
 
-	const currentFilter = localStorage.getItem("filter") || "all";
-
 	const [tasks, setTasks] = useState<Task[]>(parsedTasks);
-	const [filter, setFilter] = useState<string>(currentFilter);
 
 	return (
 		<>
@@ -20,8 +17,8 @@ function App() {
 			<Container>
 				<Header />
 				<Input setTasks={setTasks} />
-				<Tasks taskState={[tasks, setTasks]} filterState={[filter, setFilter]} />
-				<FilterCard filterState={[filter, setFilter]} />
+				<Tasks taskState={[tasks, setTasks]} />
+				<FilterCard />
 			</Container>
 
 			<footer className="footer">

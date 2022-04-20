@@ -1,16 +1,10 @@
-import { Dispatch, SetStateAction } from "react";
-
 import { Card, CardItem, Filter } from "src/components";
 
-type Props = {
-	filterState: [string, Dispatch<SetStateAction<string>>];
-};
-
-export function FilterCard({ filterState }: Props) {
+export function FilterCard() {
 	return (
 		<Card mediaHidden>
 			<CardItem>
-				<Filter filterState={filterState} />
+				<Filter />
 			</CardItem>
 		</Card>
 	);
