@@ -1,30 +1,34 @@
-import { Dispatch, FormEvent, SetStateAction, useRef } from "react";
-import { Card, CardItem } from "src/components";
+import { FormEvent, useRef } from "react";
+import { v4 as uuid4 } from "uuid";
 
 import "src/components/Input.css";
 
+import { Card, CardItem } from "src/components";
+
 import { Task } from "src/models/task";
-import { LocalCRUD } from "src/models/local-crud";
 
-type Props = {
-	setTasks: Dispatch<SetStateAction<Task[]>>;
-};
+import { taskStore } from "src/stores/task.store";
 
-export function Input({ setTasks }: Props) {
+import { useTaskStorage } from "src/hooks/useTaskStorage";
+
+export function Input() {
 	const inputTask = useRef<HTMLInputElement>(null);
+	const taskStorage = useTaskStorage();
+
+	const tasks = taskStore();
 
 	function onSubmit(e: FormEvent<HTMLFormElement>) {
 		e.preventDefault();
 
 		if (inputTask.current) {
 			const task: Task = {
-				id: Date.now(),
+				id: uuid4(),
 				description: inputTask.current.value,
 				completed: false
 			};
 
-			setTasks((prevTasks) => [...prevTasks, task]);
-			LocalCRUD.add(task);
+			tasks.addTask(task);
+			taskStorage.addTask(task);
 
 			inputTask.current.value = "";
 		}

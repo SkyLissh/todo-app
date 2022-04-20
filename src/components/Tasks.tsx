@@ -1,22 +1,21 @@
-import { Dispatch, SetStateAction } from "react";
 import { Card, CardItem, Filter, TaskItem } from "src/components";
 
 import "src/components/Tasks.css";
 
 import { Task } from "src/models/task";
-import { LocalCRUD } from "src/models/local-crud";
 
 import { filterStore } from "src/stores/filter.store";
+import { taskStore } from "src/stores/task.store";
 
-type Props = {
-	taskState: [Task[], Dispatch<SetStateAction<Task[]>>];
-};
+import { useTaskStorage } from "src/hooks/useTaskStorage";
 
-export function Tasks({ taskState }: Props) {
-	const [tasks, setTasks] = taskState;
+export function Tasks() {
 	const filter = filterStore();
+	const tasks = taskStore();
 
-	const filteredTasks = tasks.filter((task: Task) => {
+	const taskStorage = useTaskStorage();
+
+	const filteredTasks = tasks.values.filter((task: Task) => {
 		switch (filter.value) {
 			case "completed":
 				return task.completed;
@@ -30,14 +29,14 @@ export function Tasks({ taskState }: Props) {
 	});
 
 	function clearCompleted() {
-		setTasks(tasks.filter((task: Task) => !task.completed));
-		LocalCRUD.removeCompleted();
+		tasks.deleteCompleted();
+		taskStorage.removeCompleted();
 	}
 
 	return (
 		<Card>
 			{filteredTasks.map((task) => (
-				<TaskItem task={task} setTasks={setTasks} key={task.id}>
+				<TaskItem id={task.id} key={task.id}>
 					<p className="card__text">{task.description}</p>
 				</TaskItem>
 			))}
