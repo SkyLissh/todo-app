@@ -1,5 +1,3 @@
-import { Button } from "src/components";
-
 import "src/components/CardItem.css";
 
 interface Props {
