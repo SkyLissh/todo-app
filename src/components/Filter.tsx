@@ -1,13 +1,13 @@
 import "src/components/Filter.css";
 
-import { filterStore } from "src/stores/filter.store";
+import { useStore } from "src/store/useStore";
 
 type Props = {
 	hidden?: boolean;
 };
 
 export function Filter({ hidden }: Props) {
-	const filter = filterStore();
+	const filter = useStore((state) => state.filter);
 
 	const options: string[] = ["all", "active", "completed"];
 

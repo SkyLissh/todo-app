@@ -4,16 +4,11 @@ import "src/components/Tasks.css";
 
 import { Task } from "src/models/task";
 
-import { filterStore } from "src/stores/filter.store";
-import { taskStore } from "src/stores/task.store";
-
-import { useTaskStorage } from "src/hooks/useTaskStorage";
+import { useStore } from "src/store/useStore";
 
 export function Tasks() {
-	const filter = filterStore();
-	const tasks = taskStore();
-
-	const taskStorage = useTaskStorage();
+	const filter = useStore((state) => state.filter);
+	const tasks = useStore((state) => state.tasks);
 
 	const filteredTasks = tasks.values.filter((task: Task) => {
 		switch (filter.value) {
@@ -30,7 +25,6 @@ export function Tasks() {
 
 	function clearCompleted() {
 		tasks.deleteCompleted();
-		taskStorage.removeCompleted();
 	}
 
 	return (

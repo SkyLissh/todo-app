@@ -1,6 +1,6 @@
 import { Button } from "src/components";
 
-import { taskStore } from "src/stores/task.store";
+import { useStore } from "src/store/useStore";
 
 import { useTaskStorage } from "src/hooks/useTaskStorage";
 
@@ -11,22 +11,22 @@ type Props = {
 };
 
 export function TaskItem({ children, id }: Props) {
-	const tasks = taskStore();
+	const tasks = useStore((state) => state.tasks);
 	const task = tasks.values.find((task) => task.id === id)!!;
 
-	const taskStorage = useTaskStorage();
+	// const taskStorage = useTaskStorage();
 
 	const iconHidden = task.completed ? "" : "icon--hidden";
 	const active = task.completed ? "active" : "";
 
 	function onDelete() {
 		tasks.removeTask(id);
-		taskStorage.removeTask(id);
+		// taskStorage.removeTask(id);
 	}
 
 	function toggleComplete() {
 		tasks.toggleCompleted(id);
-		taskStorage.updateTask(task.id, { completed: !task.completed });
+		// taskStorage.updateTask(task.id, { completed: !task.completed });
 	}
 
 	return (
