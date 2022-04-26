@@ -15,6 +15,10 @@ export function Input() {
 		e.preventDefault();
 
 		if (inputTask.current) {
+			if (inputTask.current.value.trim() === "") {
+				return;
+			}
+
 			tasks.addTask(inputTask.current.value);
 
 			inputTask.current.value = "";
