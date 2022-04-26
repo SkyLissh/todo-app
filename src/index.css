@@ -56,14 +56,10 @@ body.theme--dark {
 
 h1 {
 	margin: 0;
+	display: block;
 }
 
 .icon {
-	/* width: 1.6em; */
-	/* height: 1.6em; */
-	/* font-size: 26px; */
-	/* color: var(--fg-secondary); */
-
 	display: block;
 }
 

@@ -1,3 +1,8 @@
+.task__list {
+	margin: 0;
+	padding: 0;
+}
+
 .card__text {
 	width: 0;
 
@@ -9,11 +14,6 @@
 	transition: color 0.3s ease-in-out;
 
 	flex: 1 1 auto;
-}
-.card__text:last-child {
-	margin-left: 0;
-	margin-right: 1em;
-	text-align: right;
 }
 
 .theme--dark .card__text {
@@ -38,6 +38,14 @@
 	justify-content: space-between;
 }
 
+.task__options .button--text:last-child {
+	margin-right: 1em;
+
+	text-align: right;
+
+	flex: 0 0 calc(50% - 1em);
+}
+
 .task__option {
 	flex: 0 0 calc(50% - 1em);
 	color: var(--fg-secondary);
@@ -47,25 +55,16 @@
 	color: var(--fg-secondary-dark);
 }
 
-.option--select {
-	transition: color 0.2s ease-in-out;
-}
-.option--select:hover {
-	cursor: pointer;
-
-	color: var(--fg);
-}
-
-.theme--dark .option--select:hover {
-	color: var(--fg-dark);
-}
-
 @media (min-width: 768px) {
 	.card__text {
 		font-size: 1.2em;
 	}
 	.task__options .card__text {
 		font-size: 1em;
+	}
+
+	.task__options .button--text:last-child {
+		flex: 0 0 calc(33.3333% - 1em);
 	}
 
 	.task__option {

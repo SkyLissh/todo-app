@@ -1,4 +1,6 @@
-import { Button } from "src/components";
+import "src/components/TaskItem.css";
+
+import { IconButton, Checkbox } from "src/components";
 
 import { useStore } from "src/store/useStore";
 
@@ -12,9 +14,6 @@ export function TaskItem({ children, id }: Props) {
 	const tasks = useStore((state) => state.tasks);
 	const task = tasks.values.find((task) => task.id === id)!!;
 
-	const iconHidden = task.completed ? "" : "icon--hidden";
-	const active = task.completed ? "active" : "";
-
 	function onDelete() {
 		tasks.removeTask(id);
 	}
@@ -24,18 +23,12 @@ export function TaskItem({ children, id }: Props) {
 	}
 
 	return (
-		<div className="card__item">
-			<Button iconStyle onClick={() => toggleComplete()}>
-				<div className={`circle ${active}`}>
-					<span className={`material-icons icon icon--done ${iconHidden}`}>done</span>
-				</div>
-			</Button>
+		<li className="task__item">
+			<Checkbox id={id} checked={task.completed} onChange={toggleComplete} />
 
 			{children}
 
-			<Button iconStyle onClick={() => onDelete()}>
-				<span className="material-icons icon">close</span>
-			</Button>
-		</div>
+			<IconButton icon="close" hidden onClick={() => onDelete()} />
+		</li>
 	);
 }

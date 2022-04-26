@@ -1,5 +1,6 @@
 import "src/components/Filter.css";
 
+import { TextButton } from "src/components";
 import { useStore } from "src/store/useStore";
 
 type Props = {
@@ -14,13 +15,13 @@ export function Filter({ hidden }: Props) {
 	return (
 		<div className={`filter ${hidden ? "hide--filter" : ""}`}>
 			{options.map((option) => (
-				<p
-					className={`filter__text ${filter.value == option ? "active" : ""}`}
+				<TextButton
+					text={option}
 					key={option}
+					bold
+					active={filter.value === option}
 					onClick={() => filter.setFilter(option)}
-				>
-					{option}
-				</p>
+				/>
 			))}
 		</div>
 	);

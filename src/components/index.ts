@@ -1,4 +1,4 @@
-export * from "src/components/Button";
+export * from "src/components/Buttons/index";
 export * from "src/components/Card";
 export * from "src/components/CardItem";
 export * from "src/components/Container";

@@ -2,7 +2,7 @@ import { useEffect } from "react";
 
 import "src/components/Header.css";
 
-import { Button } from "src/components";
+import { IconButton } from "src/components";
 import { useStore } from "src/store/useStore";
 
 export function Header() {
@@ -17,11 +17,11 @@ export function Header() {
 	return (
 		<header className="header">
 			<h1 className="header__title">TODO</h1>
-			<Button alt iconStyle onClick={() => theme.toggleTheme()}>
-				<span className="material-icons icon--header">
-					{theme.value ? "light_mode" : "brightness_3"}
-				</span>
-			</Button>
+			<IconButton
+				icon={theme.value ? "light_mode" : "brightness_3"}
+				big
+				onClick={() => theme.toggleTheme()}
+			/>
 		</header>
 	);
 }

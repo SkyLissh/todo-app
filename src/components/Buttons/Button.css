@@ -18,27 +18,16 @@
 
 .button:hover {
 	cursor: pointer;
-	color: var(--fg-disabled);
+	color: var(--fg);
 }
 
 .theme--dark .button:hover {
 	color: var(--fg-dark);
 }
 
-.button--icon {
-	padding: 0;
-
-	color: var(--fg-secondary);
-
-	background: none;
-}
-
 .button--alt {
 	color: white;
 }
-/* .button--alt.button--icon {
-	color: var(--bg-color);
-} */
 
 .button--alt .material-icons {
 	font-size: 1.7em;

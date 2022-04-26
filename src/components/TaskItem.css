@@ -1,0 +1,27 @@
+.task__item {
+	min-height: 100%;
+
+	padding: 1em 1.3em;
+
+	border-bottom: 1px solid var(--fg-disabled);
+
+	transition: border-bottom 0.3s ease-in-out;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.theme--dark .task__item {
+	border-bottom: 1px solid var(--fg-disabled-dark);
+}
+
+@media screen and (min-width: 768px) {
+	.task__item {
+		padding: 1.5em 1.3em;
+	}
+	.task__item:hover .button--hide {
+		opacity: 1;
+		visibility: visible;
+	}
+}

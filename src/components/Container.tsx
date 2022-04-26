@@ -5,5 +5,5 @@ type Props = {
 };
 
 export function Container({ children }: Props) {
-	return <div className="container">{children}</div>;
+	return <main className="container">{children}</main>;
 }

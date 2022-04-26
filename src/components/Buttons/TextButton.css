@@ -1,0 +1,41 @@
+.button--text {
+	width: auto;
+
+	margin: 0;
+	padding: 0;
+
+	font-weight: 400;
+	color: var(--fg-secondary);
+
+	background: none;
+
+	text-transform: capitalize;
+}
+.button--text:hover {
+	color: var(--fg);
+}
+
+.theme--dark .button--text {
+	color: var(--fg-secondary-dark);
+}
+.theme--dark .button--text:hover {
+	color: var(--fg-dark);
+}
+
+.text--active {
+	color: var(--accent);
+}
+.text--active:hover {
+	color: var(--accent);
+}
+
+.theme--dark .text--active {
+	color: var(--accent);
+}
+.theme--dark .text--active:hover {
+	color: var(--accent);
+}
+
+.text--bold {
+	font-weight: 700;
+}
