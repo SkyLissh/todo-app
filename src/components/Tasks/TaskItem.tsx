@@ -1,4 +1,4 @@
-import "src/components/TaskItem.css";
+import "src/components/Tasks/TaskItem.css";
 
 import { IconButton, Checkbox } from "src/components";
 

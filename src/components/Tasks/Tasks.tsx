@@ -1,6 +1,6 @@
 import { Card, CardItem, Filter, TaskItem, TextButton } from "src/components";
 
-import "src/components/Tasks.css";
+import "src/components/Tasks/Tasks.css";
 
 import { Task } from "src/models/task";
 

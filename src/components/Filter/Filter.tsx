@@ -1,4 +1,4 @@
-import "src/components/Filter.css";
+import "src/components/Filter/Filter.css";
 
 import { TextButton } from "src/components";
 import { useStore } from "src/store/useStore";

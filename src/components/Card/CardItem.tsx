@@ -1,4 +1,4 @@
-import "src/components/CardItem.css";
+import "src/components/Card/CardItem.css";
 
 interface Props {
 	children: React.ReactNode;

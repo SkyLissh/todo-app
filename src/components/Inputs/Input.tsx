@@ -1,6 +1,6 @@
 import { FormEvent, useRef } from "react";
 
-import "src/components/Input.css";
+import "src/components/Inputs/Input.css";
 
 import { Card, CardItem } from "src/components";
 
