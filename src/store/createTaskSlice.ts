@@ -6,14 +6,20 @@ import { Task } from "src/models/task";
 
 export interface TaskSlice {
 	values: Task[];
+
 	addTask: (description: string) => void;
 	removeTask: (id: string) => void;
 	toggleCompleted: (id: string) => void;
 	deleteCompleted: () => void;
+	activeLength: () => number;
 }
 
-export const createTaskSlice: StoreSlice<TaskSlice> = (set) => ({
+export const createTaskSlice: StoreSlice<TaskSlice> = (set, get) => ({
 	values: [],
+
+	activeLength: () => {
+		return get().tasks.values.filter((task) => !task.completed).length;
+	},
 
 	addTask: (description: string) => {
 		set((state) => ({
