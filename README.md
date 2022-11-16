@@ -21,7 +21,7 @@ Users should be able to:
 ### 🔗 Links
 
 - Solution URL: [Repository](https://github.com/skylissh/todo-app)
-- Live Site URL: [Todo App](https://todo.skylissh.me)
+- Live Site URL: [Todo App](https://todo.skylissh.live)
 
 
 ## ✏️ My process
