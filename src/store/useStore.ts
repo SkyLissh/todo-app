@@ -1,9 +1,9 @@
 import create, { GetState, SetState } from "zustand";
 import { devtools, persist } from "zustand/middleware";
 
-import { FilterSlice, createFilterSlice } from "src/store/createFilterSlice";
-import { TaskSlice, createTaskSlice } from "src/store/createTaskSlice";
-import { ThemeSlice, createThemeSlice } from "src/store/createThemeSlice";
+import { createFilterSlice, FilterSlice } from "src/store/createFilterSlice";
+import { createTaskSlice, TaskSlice } from "src/store/createTaskSlice";
+import { createThemeSlice, ThemeSlice } from "src/store/createThemeSlice";
 
 interface StoreState {
 	filter: FilterSlice;
@@ -42,7 +42,10 @@ export const useStore = create<StoreState>()(
 			}),
 			{
 				name: "todo-app",
-				partialize: (state) => ({ tasks: state.tasks, theme: state.theme }),
+				partialize: (state) => ({
+					tasks: state.tasks,
+					theme: state.theme
+				}),
 				merge: (state, partialState) => deepMerge(state as StoreState, partialState)
 			}
 		)
