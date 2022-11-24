@@ -12,7 +12,7 @@ export interface TaskSlice {
 	removeTask: (id: string) => void;
 	toggleCompleted: (id: string) => void;
 	deleteCompleted: () => void;
-	seedTasks: (seed: Task[]) => void;
+	moveTask: (src: number, dest: number) => void;
 }
 
 export const createTaskSlice: StoreSlice<TaskSlice> = (set, get) => ({
@@ -69,11 +69,15 @@ export const createTaskSlice: StoreSlice<TaskSlice> = (set, get) => ({
 		}));
 	},
 
-	seedTasks: (seed: Task[]) => {
+	moveTask(src, dest) {
+		const tasks = get().tasks.values;
+		const [removed] = tasks.splice(src, 1);
+		tasks.splice(dest, 0, removed);
+
 		set((state) => ({
 			tasks: {
 				...state.tasks,
-				values: seed
+				values: tasks
 			}
 		}));
 	}

@@ -1,9 +1,11 @@
 .task__item {
-	min-height: 100%;
+	/* min-height: 20%; */
 
 	padding: 1em 1.3em;
 
+	background-color: var(--bg-component);
 	border-bottom: 1px solid var(--fg-disabled);
+	border-radius: 8px;
 
 	transition: border-bottom 0.3s ease-in-out;
 
@@ -13,6 +15,7 @@
 }
 
 .theme--dark .task__item {
+	background-color: var(--bg-component-dark);
 	border-bottom: 1px solid var(--fg-disabled-dark);
 }
 

@@ -14,7 +14,7 @@ function App() {
 			</Container>
 
 			<footer className="footer">
-				<p className="footer_text">Drag and drop to render list</p>
+				<p className="footer_text">Drag and drop to reorder list</p>
 			</footer>
 		</>
 	);
