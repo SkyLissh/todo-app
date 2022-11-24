@@ -10,8 +10,10 @@
 	margin-left: 1em;
 
 	color: var(--fg);
+	font-size: 1.2em;
 
 	transition: color 0.3s ease-in-out;
+	overflow-wrap: break-word;
 
 	flex: 1 1 auto;
 }

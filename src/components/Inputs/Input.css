@@ -3,11 +3,10 @@
 }
 
 .card__input {
-	margin-left: 1em;
 	width: 100%;
 
 	font-family: var(--font-family);
-	font-size: 1em;
+	font-size: 1.2em;
 
 	outline: none;
 	border: none;
