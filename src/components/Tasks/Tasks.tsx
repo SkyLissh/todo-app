@@ -36,7 +36,7 @@ export function Tasks() {
 			</ul>
 			<CardItem>
 				<div className="task__options">
-					<p className="card__text task__option">{tasks.activeLength()} Items Left</p>
+					<p className="card__text task__option">{filteredTasks.length} Items</p>
 					<Filter hidden />
 					<TextButton text="Clear Completed" onClick={() => tasks.deleteCompleted()} />
 				</div>

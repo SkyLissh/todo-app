@@ -11,15 +11,10 @@ export interface TaskSlice {
 	removeTask: (id: string) => void;
 	toggleCompleted: (id: string) => void;
 	deleteCompleted: () => void;
-	activeLength: () => number;
 }
 
 export const createTaskSlice: StoreSlice<TaskSlice> = (set, get) => ({
 	values: [],
-
-	activeLength: () => {
-		return get().tasks.values.filter((task) => !task.completed).length;
-	},
 
 	addTask: (description: string) => {
 		set((state) => ({
